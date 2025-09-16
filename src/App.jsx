@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "./contexts/authContext";
 import Registration from "./components/auth/registration/Registration";
 import Login from "./components/auth/login/Login";
@@ -14,8 +14,12 @@ const PrivateRoute = ({ children }) => {
 };
 
 function App() {
+    
+    const basename = import.meta.env.VITE_BASE_PATH || "/";
+
     return (
-        <Router>
+        
+        <BrowserRouter basename={basename}>
             <Routes>
                 <Route path="/register" element={<Registration />} />
                 <Route path="/login" element={<Login />} />
@@ -29,7 +33,7 @@ function App() {
                 />
                 <Route path="*" element={<Navigate to="/login" />} />
             </Routes>
-        </Router>
+        </BrowserRouter>
     );
 }
 
