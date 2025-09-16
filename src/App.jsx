@@ -10,19 +10,17 @@ const PrivateRoute = ({ children }) => {
     if (loading) {
         return <div>Loading...</div>;
     }
-    return userLoggedIn ? children : <Navigate to="/todo-app/login" />;
+    return userLoggedIn ? children : <Navigate to="/login" />;
 };
 
 function App() {
-    
     const basename = import.meta.env.VITE_BASE_PATH || "/";
 
     return (
-        
         <BrowserRouter basename={basename}>
             <Routes>
-                <Route path="/todo-app/register" element={<Registration />} />
-                <Route path="/todo-app/login" element={<Login />} />
+                <Route path="/register" element={<Registration />} />
+                <Route path="/login" element={<Login />} />
                 <Route
                     path="/dashboard"
                     element={
@@ -31,7 +29,7 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-                <Route path="*" element={<Navigate to="/todo-app/login" />} />
+                <Route path="*" element={<Navigate to="/login" />} />
             </Routes>
         </BrowserRouter>
     );

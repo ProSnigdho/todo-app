@@ -79,7 +79,7 @@ const Login = () => {
                     <a href="#">Forgot password?</a>
                 </p> */}
                 <p className="redirect">
-                    Not registered yet? <a href="/todo-app/register">Create an Account</a>
+                    Not registered yet? <a href="/register">Create an Account</a>
                 </p>
             </div>
 
@@ -90,7 +90,7 @@ const Login = () => {
                     className="right-image"
                 />
             </div>
-        </div>
+        </div> 
     );
 };
 

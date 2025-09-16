@@ -19,7 +19,6 @@ const Registration = () => {
             return;
         }
 
-        
         if (password.length < 6) {
             alert("Password should be at least 6 characters long.");
             return;
@@ -30,7 +29,6 @@ const Registration = () => {
             alert("Registration successful!");
             navigate("/login");
         } catch (error) {
-            
             alert("Registration failed. Please try again.");
             console.error(error);
         }
@@ -64,7 +62,7 @@ const Registration = () => {
                     />
                     <button type="submit">Sign Up</button>
                     <p>
-                        Already have an account? <Link to="/todo-app/login" className="login">Login</Link>
+                        Already have an account? <Link to="/login" className="login">Login</Link>
                     </p>
                 </form>
             </div>
