@@ -10,7 +10,7 @@ const PrivateRoute = ({ children }) => {
     if (loading) {
         return <div>Loading...</div>;
     }
-    return userLoggedIn ? children : <Navigate to="/login" />;
+    return userLoggedIn ? children : <Navigate to="/todo-app/login" />;
 };
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
         
         <BrowserRouter basename={basename}>
             <Routes>
-                <Route path="/register" element={<Registration />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/todo-app/register" element={<Registration />} />
+                <Route path="/todo-app/login" element={<Login />} />
                 <Route
                     path="/dashboard"
                     element={
@@ -31,7 +31,7 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-                <Route path="*" element={<Navigate to="/login" />} />
+                <Route path="*" element={<Navigate to="/todo-app/login" />} />
             </Routes>
         </BrowserRouter>
     );

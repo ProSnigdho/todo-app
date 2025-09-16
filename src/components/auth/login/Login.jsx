@@ -7,14 +7,14 @@ import loginImage from "../../../assets/Login.jpeg";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [rememberMe, setRememberMe] = useState(false); // Add this state
+    const [rememberMe, setRememberMe] = useState(false); 
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await doSignInWithEmailAndPassword(email, password);
-            // If "Remember me" is checked, store a flag in local storage
+            
             if (rememberMe) {
                 localStorage.setItem('userLoggedIn', 'true');
             }
@@ -67,8 +67,8 @@ const Login = () => {
                         <input 
                             type="checkbox" 
                             id="remember" 
-                            checked={rememberMe} // Link the input to the state
-                            onChange={(e) => setRememberMe(e.target.checked)} // Update the state on change
+                            checked={rememberMe} 
+                            onChange={(e) => setRememberMe(e.target.checked)} 
                         />
                         <label htmlFor="remember">Remember me</label>
                     </div>
@@ -79,7 +79,7 @@ const Login = () => {
                     <a href="#">Forgot password?</a>
                 </p> */}
                 <p className="redirect">
-                    Not registered yet? <a href="/register">Create an Account</a>
+                    Not registered yet? <a href="/todo-app/register">Create an Account</a>
                 </p>
             </div>
 
