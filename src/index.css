@@ -1,0 +1,79 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Button Styling */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #4f46e5;
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: white;
+  color: #4f46e5;
+  border: 1px solid #4f46e5;
+}
+
+.google-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  background-color: #4285f4;
+  color: white;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #3367d6;
+}
+
+.google-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+
+  .google-btn {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}

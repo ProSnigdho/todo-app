@@ -1,0 +1,200 @@
+/* General styling for the page */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f7fc;
+  justify-content: space-between;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.form-container {
+  width: 50%;
+  background-color: #ffffff; /* White background for the form */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  color: #4c4b9f;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+p {
+  color: #777;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent; /* Keep border as transparent */
+}
+
+button:hover {
+  background-color: white; /* On hover, change to white */
+  color: #4f46e5; /* Change text color back to blue */
+  border: 1px solid #4f46e5; /* Add a blue border on hover */
+}
+
+/* Google Button Styling */
+.google-btn {
+  width: 100%; /* Reduce the width */
+  max-width: 320px; /* Limit width to a specific max-width */
+  padding: 12px;
+  background-color: #4285f4;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: center; /* Center the button within the form */
+}
+
+.google-btn:hover {
+  background-color: #3367d6;
+  color: white;
+  border: 1px solid #3367d6;
+}
+
+.google-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+.remember-me {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.redirect {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.redirect a {
+  color: #4f46e5;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Right Side (Graphics Section) */
+.graphics-container {
+  width: 50%;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.right-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image cover the container */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .graphics-container {
+    width: 100%;
+  }
+
+  .right-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Remember Me Section */
+.remember-me {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #777;
+}
+
+.remember-me input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.remember-me input:checked {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.remember-me label {
+  color: #777;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.remember-me label:hover {
+  color: #4f46e5;
+}
+
